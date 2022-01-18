@@ -194,28 +194,28 @@ async def hmm(client, message):
                 return
         # test = emoji.demojize(test.strip())
 
-        test = test.replace("Emiko", "Aco")
-        test = test.replace("Emiko", "Aco")
-        test = test.replace("My god is @excrybaby", "I'm a Christian")
+        test = test.replace("Yansen", "Aco")
+        test = test.replace("Yansen", "Aco")
+        test = test.replace("My god is @yansesad", "I'm a Yansen")
         test = test.replace("16", "9")
-        test = test.replace("@excrybaby is my husband.", "I'm single.")
-        test = test.replace("@emikosupport", "Emikobot.ai")
-        test = test.replace("I live in @emikosupport.", "I live in San Francisco, California")
-        test = test.replace("I was created by @excrybaby", "I made myself")
+        test = test.replace("@yansesad is my husband.", "I'm single.")
+        test = test.replace("@yansensesat", "Yansenbot.ai")
+        test = test.replace("I live in @yansensesat.", "I live in San Francisco, California")
+        test = test.replace("I was created by @yansesad", "I made myself")
         test = test.replace(
-            "Hello there I am Emiko...nice to meet u",
+            "Hello there I am Yansen...nice to meet u",
             "Hi, my friend! Do you want me to tell you a joke?")
-        test = test.replace("@excrybaby is my owner", "Have the control right.")
+        test = test.replace("@yansesad is my owner", "Have the control right.")
         test = test.replace(
             "Hi, My name is Emiko Nice to meet you.",
             "Hi, my friend, what can I do for you today?")
         response = await lunaQuery(
             test, message.from_user.id if message.from_user else 0
         )
-        response = response.replace("Aco", "Emiko")
-        response = response.replace("aco", "emiko")
-        response = response.replace("Luna", "Emiko")
-        response = response.replace("luna", "emiko")
+        response = response.replace("Aco", "Yansen")
+        response = response.replace("aco", "yansen")
+        response = response.replace("Luna", "Yansen")
+        response = response.replace("luna", "yansen")
         response = response.replace("I'm a Christian", "My god is @excrybaby")
         response = response.replace("9", "16")
         response = response.replace("I'm married to my job.", "I'm married with @excrybaby")
