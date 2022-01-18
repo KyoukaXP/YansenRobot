@@ -26,7 +26,21 @@ async def apakah(event):
 
 
 
-YANSEN_STRING = @register(pattern="^yansen ?(.*)")
+YANSEN_STRING = ["Iya", 
+                 "Tidak", 
+                 "Mungkin", 
+                 "Mungkin Tidak", 
+                 "Bisa jadi", 
+                 "Mungkin Tidak",
+                 "Tidak Mungkin",
+                 "YNTKTS",
+                 "Pala bapak kau pecah",
+                 "Apa iya?",
+                 "Tanya aja sama mamak kau tu pler"
+                 ]
+
+
+@register(pattern="^yansen ?(.*)")
 async def apakah(event):
     quew = event.pattern_match.group(1)
     if not quew:
