@@ -41,7 +41,8 @@ from telegram.error import (
     ChatMigrated,
     NetworkError,
     TelegramError,
-    TimedOutUnauthorized,
+    TimedOut, 
+    Unauthorized,
 )
 from telegram.ext import (
     CallbackContext,
