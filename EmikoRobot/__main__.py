@@ -386,7 +386,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Source Code", url="https://github.com/Yansensad/YansenRobot"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="yansen_back"),
+                    InlineKeyboardButton(text="Go Back", callback_data="emiko_back"),
                  ]
                 ]
             ),
