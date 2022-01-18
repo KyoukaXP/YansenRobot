@@ -23,3 +23,26 @@ async def apakah(event):
         await event.reply('Berikan saya pertanyaan 😐')
         return
     await event.reply(random.choice(APAKAH_STRING))
+
+
+
+YANSEN_STRING = ["ganteng", 
+                 "Manies", 
+                 "Baik", 
+                 "Jarang Sange", 
+                 "Kenapa Manggil Manggil?", 
+                 "Mungkin Tidak",
+                 "Gausa Sokab",
+                 "YNTKTS",
+                 ]
+
+
+
+
+@register(pattern="^/yansei ?(.*)")
+async def apakah(event):
+    quew = event.pattern_match.group(1)
+    if not quew:
+        await event.reply('Berikan saya pertanyaan 😐')
+        return
+    await event.reply(random.choice(YANSEN_STRING))
