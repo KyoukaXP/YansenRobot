@@ -41,8 +41,7 @@ from telegram.error import (
     ChatMigrated,
     NetworkError,
     TelegramError,
-    TimedOut,
-    Unauthorized,
+    TimedOutUnauthorized,
 )
 from telegram.ext import (
     CallbackContext,
@@ -114,7 +113,7 @@ EMI_IMG = "https://telegra.ph/file/c46b5dfde1e95777965ac.jpg"
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @yansesat \
+ You can support the project by contacting @yansesad \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -369,18 +368,18 @@ def emiko_about_callback(update, context):
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
             "\n\n_Yansen's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for EmikoRobot.",
+            "\n\n Click on button bellow to get basic help for YansenRobot.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="yansen_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="yansen_notes"),
+                    InlineKeyboardButton(text="Admins", callback_data="emiko_admin"),
+                    InlineKeyboardButton(text="Notes", callback_data="emiko_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="yansen_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="yansen_credit"),
+                    InlineKeyboardButton(text="Support", callback_data="emiko_support"),
+                    InlineKeyboardButton(text="Credits", callback_data="emiko_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Source Code", url="https://github.com/Yansensad/YansenRobot"),
@@ -406,7 +405,7 @@ def emiko_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "yansen_admin":
+    elif query.data == "emiko_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
             "\nCongragulations, YansenRobot now ready to manage your group."
@@ -423,7 +422,7 @@ def emiko_about_callback(update, context):
             ),
         )
 
-    elif query.data == "yansen_notes":
+    elif query.data == "emiko_notes":
         query.message.edit_text(
             text=f"<b>๏ Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -434,7 +433,7 @@ def emiko_about_callback(update, context):
                 [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
             ),
         )
-    elif query.data == "yansen_support":
+    elif query.data == "emiko_support":
         query.message.edit_text(
             text="*๏ Emiko support chats*"
             "\nJoin My Support Group/Channel for see or report a problem on Yansen.",
@@ -454,7 +453,7 @@ def emiko_about_callback(update, context):
         )
 
 
-    elif query.data == "yansen_credit":
+    elif query.data == "emiko_credit":
         query.message.edit_text(
             text=f"๏ Credis for Emiko\n"
             "\nHere Developers Making And Give Inspiration For Made The YansenRobot",
